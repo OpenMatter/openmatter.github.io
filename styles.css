@@ -1,0 +1,76 @@
+
+body {
+  font-family: RobotoDraft, sans-serif;
+  color: #333;
+  background: #F6F6F6;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+paper-tabs, core-toolbar {
+	background-color: #00bcd4;
+	color: #fff;
+	box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+}
+    
+core-toolbar paper-tabs {
+	box-shadow: none;
+}
+
+#container {
+  width: 80%;
+  height: 100%;
+  padding: 60px;
+}
+
+#container .welcome {
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+#container .sub {
+  margin-top: 60px;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+#container .message {
+  margin-top: 100px;
+}
+
+#container .card {
+      display: inline-block;
+      background: white;
+      box-sizing: border-box;
+      width: 100%;
+      height: 270px;
+      margin: 16px;
+      padding: 16px;
+      border-radius: 2px;
+    }
+    
+#container .card img {
+  float: left;
+  height: 230px;
+  width: 230px;
+}    
+
+#container .card h2 {
+  margin-left: 260px;
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+#container .card p {
+  margin-left: 260px;
+  margin-top: -16px;
+}
+
+#container .card paper-icon-button {
+  float: right;
+}

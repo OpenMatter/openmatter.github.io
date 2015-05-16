@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>OpenMatter</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  
+  <link rel="import" href="bower_components/font-roboto/roboto.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+	<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/core-icons/core-icons.html">
+  <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
+  <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
+  <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
+  <link rel="import" href="components/post-list/post-list.html">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body unresolved>
+  
+  <core-toolbar class="medium-tall">
+  
+			<div flex>OpenMatter</div>
+			<paper-icon-button icon="search"></paper-icon-button>
+    
+			<div class="bottom fit" horizontal layout>
+    
+			<paper-tabs selected="home" id="home" self-end>
+    
+				<paper-tab name="home">HOME</paper-tab>
+				<paper-tab name="blog">BLOG</paper-tab>
+				<paper-tab name="apps">APPS</paper-tab>
+        
+			</paper-tabs>
+      
+    </div>
+  
+  </core-toolbar>
+  
+  <core-animated-pages selected="home" transitions="slide-from-right">
+    <div name="home" id="container" layout vertical center>
+      <h1 class="welcome">Welcome to OpenMatter!</h1>
+      <span class="sub">We develop apps for the Android platform and stuff!</span>
+      <p class="message">Thanks for visitng! You're awesome!</p>
+    </div>
+    
+    <div id="container" name="blog" layout vertical center>
+      <post-list show="blog"></post-list>
+    </div>
+    
+    <div id="container" name="apps" layout>
+      <paper-shadow class="card" z="1">
+        <paper-icon-button onclick="javascript:window.open('https://github.com/OpenMatter/EasyBalance');" icon="extension" aria-label="Source Code on GitHub" title="Source Code on GitHub"></paper-icon-button>
+        <paper-icon-button onclick="javascript:window.open('https://play.google.com/store/apps/details?id=com.aj.eb');" icon="shop" aria-label="Get it on Google Play" title="Get it on Google Play"></paper-icon-button>
+        <img src="images/easy_balance.webp" />
+        <h2>Easy Balance</h2>
+        <p>Have trouble remembering various USSD codes, text messages and numbers to know your balance? Leave it to us.
+With easy balance our aim is to provide the users a single app which can be used to check balance and mobile data. Only thing you need is a functioning finger or anything with which you can touch the phone to use the app.</p>
+      </paper-shadow>
+      
+      <paper-shadow class="card" z="1">
+        <paper-icon-button onclick="javascript:window.open('https://github.com/OpenMatter/Papierr');" icon="extension" aria-label="Source Code on GitHub" title="Source Code on GitHub"></paper-icon-button>
+        <paper-icon-button onclick="javascript:window.open('https://play.google.com/store/apps/details?id=io.geeteshk.papier');" icon="shop" aria-label="Get it on Google Play" title="Get it on Google Play"></paper-icon-button>
+        <img src="images/papierr.webp" />
+        <h2>Papierr</h2>
+        <p>Make notes, edit them and even remove them when you want to. Papierr was designed to be a simple app to keep notes and reminders and get back to them when you need to. It is very user-friendly and considerably small in size. Papierr is constantly being improved everyday and is open source.</p>
+      </paper-shadow>
+    </div>
+  </core-animated-pages>
+  
+  <script src="main.js"></script>
+</body>
+</html>

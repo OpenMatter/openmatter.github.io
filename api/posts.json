@@ -1,0 +1,9 @@
+[
+  {
+    "uid": 1,
+    "text" : "Woah! A new website!",
+    "username" : "Geetesh",
+    "avatar" : "images/avatar-01.svg",
+    "favorite": false
+  }
+]
